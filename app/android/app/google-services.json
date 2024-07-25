@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "561282880950",
+    "project_id": "spotify-mini-2df4a",
+    "storage_bucket": "spotify-mini-2df4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561282880950:android:9f5093e03e9e95e1025d17",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkxNLDb-WG6UIWlaXB81cSoyRjjub7mgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
