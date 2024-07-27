@@ -8,6 +8,7 @@ import '../../../core/configs/assets/app_vector.dart';
 import '../../../data/models/auth/signin_user_req.dart';
 import '../../../domain/usecases/auth/signin.dart';
 import '../../../service_locator.dart';
+import '../../home/pages/home.dart';
 
 class SigninPage extends StatelessWidget {
   SigninPage({super.key});

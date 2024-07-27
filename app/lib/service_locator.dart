@@ -1,9 +1,13 @@
-import 'package:app/data/repository/auth_repos_impl.dart';
-import 'package:app/data/sources/auth/auth_firebase_service.dart';
-import 'package:app/domain/repository/auth/auth.dart';
-import 'package:app/domain/usecases/auth/signin.dart';
-import 'package:app/domain/usecases/auth/signup.dart';
 import 'package:get_it/get_it.dart';
+
+import 'data/repository/auth/auth_repos_impl.dart';
+import 'data/repository/song/song_repository_impl.dart';
+import 'data/sources/auth/auth_firebase_service.dart';
+import 'data/sources/song/song_firebase_service.dart';
+import 'domain/repository/auth/auth.dart';
+import 'domain/repository/song/song.dart';
+import 'domain/usecases/auth/signin.dart';
+import 'domain/usecases/auth/signup.dart';
 
 final sl = GetIt.instance;
 
