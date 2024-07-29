@@ -8,8 +8,10 @@ import 'domain/repository/auth/auth.dart';
 import 'domain/repository/song/song.dart';
 import 'domain/usecases/auth/signin.dart';
 import 'domain/usecases/auth/signup.dart';
+import 'domain/usecases/song/add_or_remove_favorite_song.dart';
 import 'domain/usecases/song/get_news_songs.dart';
 import 'domain/usecases/song/get_play_list.dart';
+import 'domain/usecases/song/is_favorite_song.dart';
 
 final sl = GetIt.instance;
 

@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/configs/constants/app_urls.dart';
 import '../../../core/configs/theme/app_colors.dart';
 import '../../../domain/entities/song/song.dart';
+import '../../song_player/pages/song_player.dart';
 import '../cubit/news_songs_cubit.dart';
 import '../cubit/news_songs_state.dart';
 

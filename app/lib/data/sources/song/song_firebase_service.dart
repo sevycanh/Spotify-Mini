@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../domain/entities/song/song.dart';
+import '../../../domain/usecases/song/is_favorite_song.dart';
 import '../../../service_locator.dart';
 import '../../models/song/song.dart';
 
