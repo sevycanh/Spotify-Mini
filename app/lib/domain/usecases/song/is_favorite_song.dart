@@ -1,13 +1,10 @@
-
 import '../../../core/usecase/usecase.dart';
 import '../../../service_locator.dart';
 import '../../repository/song/song.dart';
 
-class IsFavoriteSongUseCase implements UseCase<bool,String> {
+class IsFavoriteSongUseCase implements UseCase<bool, String> {
   @override
-  Future<bool> call({String ? params}) async {
+  Future<bool> call({String? params}) async {
     return await sl<SongsRepository>().isFavoriteSong(params!);
   }
-
-  
 }

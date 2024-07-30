@@ -6,6 +6,7 @@ import '../../../core/configs/constants/app_urls.dart';
 import '../../../domain/entities/auth/user.dart';
 import '../../models/auth/create_user_req.dart';
 import '../../models/auth/signin_user_req.dart';
+import '../../models/auth/user.dart';
 
 abstract class AuthFirebaseService {
   Future<Either> signup(CreateUserReq createUserReq);

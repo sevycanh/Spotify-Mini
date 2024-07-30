@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../common/widgets/appbar/app_bar.dart';
 import '../../../core/configs/assets/app_image.dart';
 import '../../../core/configs/assets/app_vector.dart';
+import '../../profile/pages/profile.dart';
 import '../widgets/news_songs.dart';
 import '../widgets/play_list.dart';
 
