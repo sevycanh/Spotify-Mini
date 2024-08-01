@@ -37,7 +37,7 @@ class SongFirebaseServiceImpl extends SongFirebaseService {
 
       return Right(songs);
     } catch (e) {
-      print(e);
+      print("error get new songs");
       return const Left('An error occurred, Please try again.');
     }
   }
@@ -59,10 +59,10 @@ class SongFirebaseServiceImpl extends SongFirebaseService {
         songModel.songId = element.reference.id;
         songs.add(songModel.toEntity());
       }
-
+      print("Success get play list");
       return Right(songs);
     } catch (e) {
-      print(e);
+      print("Error get play list");
       return const Left('An error occurred, Please try again.');
     }
   }

@@ -16,7 +16,8 @@ class NewsSongs extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => NewsSongsCubit()..getNewsSongs(),
-      child: SizedBox(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           height: 200,
           child: BlocBuilder<NewsSongsCubit, NewsSongsState>(
             builder: (context, state) {
@@ -30,7 +31,7 @@ class NewsSongs extends StatelessWidget {
                 return _songs(state.songs);
               }
 
-              return Container();
+              return Center(child: const Text("Error get data"),);
             },
           )),
     );

@@ -17,8 +17,8 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppbar(
-        backgroundColor: Color(0xff2C2B2B),
+      appBar: BasicAppbar(
+        backgroundColor: context.isDarkMode ? const Color(0xff2C2B2B) : Colors.white,
         title: Text('Profile'),
       ),
       body: Column(
@@ -107,7 +107,7 @@ class ProfilePage extends StatelessWidget {
             BlocBuilder<FavoriteSongsCubit, FavoriteSongsState>(
               builder: (context, state) {
                 if (state is FavoriteSongsLoading) {
-                  return const CircularProgressIndicator();
+                  return const Center(child: CircularProgressIndicator());
                 }
                 if (state is FavoriteSongsLoaded) {
                   return ListView.separated(

@@ -1,6 +1,7 @@
 import 'package:app/core/configs/theme/app_theme.dart';
 import 'package:app/firebase_options.dart';
 import 'package:app/presentation/choose_mode/bloc/theme_cubit.dart';
+import 'package:app/presentation/profile/cubit/favorite_songs_cubit.dart';
 import 'package:app/presentation/splash/pages/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -31,7 +32,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => ThemeCubit())],
+      providers: [
+        BlocProvider(create: (_) => ThemeCubit()),
+         BlocProvider(create: (_) => FavoriteSongsCubit()),
+      ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, mode) => MaterialApp(
             theme: AppTheme.lightTheme,

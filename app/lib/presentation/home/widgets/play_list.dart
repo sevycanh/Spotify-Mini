@@ -1,5 +1,7 @@
 import 'package:app/common/helpers/is_dark_mode.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../common/widgets/favorite_button/favorite_button.dart';
@@ -26,8 +28,7 @@ class PlayList extends StatelessWidget {
             }
             if (state is PlayListLoaded) {
               return Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
                     const Row(
@@ -50,7 +51,9 @@ class PlayList extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    _songs(state.songs)
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height / 2.5,
+                        child: _songs(state.songs)),
                   ],
                 ),
               );
@@ -97,23 +100,27 @@ class PlayList extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          songs[index].title,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          songs[index].artist,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 11),
-                        ),
-                      ],
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.8,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            songs[index].title,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            songs[index].artist,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 11),
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -121,7 +128,7 @@ class PlayList extends StatelessWidget {
                   children: [
                     Text(songs[index].duration.toString().replaceAll('.', ':')),
                     const SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     FavoriteButton(
                       songEntity: songs[index],
